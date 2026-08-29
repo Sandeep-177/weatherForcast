@@ -63,10 +63,12 @@ const description = getWeatherDescription(
   
   return (
     <>
-    <form onSubmit={coordinateAPI}>
-      <input type="text" value={url} name="text" id="text1" onChange={urls} placeholder="enter place name"/>
-      <button type="submit">submit</button>
+    <div className="h-screen w-screen">
+    <form onSubmit={coordinateAPI} className="bg-amber-400 flex gap-12 flex-col justify-center items-center w-[40%] h-[60%]">
+      <input className="border-2 h-60 text-center" type="text" value={url} name="text" id="text1" onChange={urls} placeholder="enter place name"/>
+      <button className="border-2 bg-black text-amber-50 px-8 py-3" type="submit">submit</button>
     </form>
+    </div>
     </>
   )
 }
